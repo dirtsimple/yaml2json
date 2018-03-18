@@ -1,0 +1,25 @@
+{
+    "name": "dirtsimple/yaml2json",
+    "description": "Full-fidelity YAML to JSON converter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PJ Eby",
+            "email": "pje@telecommunity.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/yaml": "^3",
+        "clue/phar-composer": "^1.0"
+    },
+    "bin": [
+        "yaml2json.php", "bin/yaml2json.php"
+    ],
+    "scripts": {
+        "build": [
+            "rm bin/yaml2json.php || true",
+            "phar-composer build . bin/yaml2json.phar",
+            "mv bin/yaml2json.phar bin/yaml2json.php"
+        ]
+    }
+}
