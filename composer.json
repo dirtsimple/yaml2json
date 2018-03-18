@@ -18,7 +18,9 @@
     "scripts": {
         "build": [
             "rm bin/yaml2json.php || true",
+            "sed -i -e 's%\"bin/yaml2json.php\"%\"yaml2json.php\"%' composer.json",
             "phar-composer build . bin/yaml2json.phar",
+            "sed -i -e 's%\"yaml2json.php\"%\"bin/yaml2json.php\"%' composer.json",
             "mv bin/yaml2json.phar bin/yaml2json.php"
         ]
     }
