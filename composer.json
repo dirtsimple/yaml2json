@@ -13,7 +13,7 @@
         "clue/phar-composer": "^1.0"
     },
     "bin": [
-        "yaml2json.php", "bin/yaml2json.php"
+        "bin/yaml2json.php"
     ],
     "scripts": {
         "build": [
