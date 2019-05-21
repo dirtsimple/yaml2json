@@ -1,27 +1,28 @@
 {
     "name": "dirtsimple/yaml2json",
-    "description": "Full-fidelity YAML to JSON converter",
+    "description": "Full-fidelity YAML/JSON command-line converters",
     "license": "MIT",
     "authors": [
         {
             "name": "PJ Eby",
-            "email": "pje@telecommunity.com"
+            "homepage": "https://github.com/pjeby"
         }
     ],
     "require-dev": {
         "symfony/yaml": "^3",
-        "clue/phar-composer": "^1.0"
+        "humbug/box": "3.7.0"
     },
     "bin": [
-        "bin/yaml2json.php"
+        "bin/yaml2json.php",
+        "bin/json2yaml.php"
     ],
     "scripts": {
         "build": [
-            "rm bin/yaml2json.php || true",
-            "sed -i -e 's%\"bin/yaml2json.php\"%\"yaml2json.php\"%' composer.json",
-            "phar-composer build . bin/yaml2json.phar",
-            "sed -i -e 's%\"yaml2json.php\"%\"bin/yaml2json.php\"%' composer.json",
-            "mv bin/yaml2json.phar bin/yaml2json.php"
+            "box compile -c box.y2j.json",
+            "box compile -c box.j2y.json"
         ]
+    },
+    "archive": {
+        "exclude": ["box.*.json", "*.php"]
     }
 }

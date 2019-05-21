@@ -1,0 +1,5 @@
+{
+  "directories": ["vendor/symfony/yaml"],
+  "main": "json2yaml.php",
+  "output": "bin/json2yaml.php"
+}
