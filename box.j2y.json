@@ -3,6 +3,9 @@
   "output": "bin/json2yaml.php",
   "exclude-dev-files": false,
   "finder": [
-    { "name": "*.php", "exclude": "Tests", "in": ["vendor/symfony/yaml"] }
+    {
+      "name": "*.php",
+      "exclude": "Tests",
+      "in": ["vendor/symfony/yaml", "vendor/dirtsimple/clean-yaml/src"] }
   ]
 }
