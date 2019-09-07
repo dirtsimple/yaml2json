@@ -1,5 +1,8 @@
 {
-  "directories": ["vendor/symfony/yaml"],
   "main": "yaml2json.php",
-  "output": "bin/yaml2json.php"
+  "output": "bin/yaml2json.php",
+  "exclude-dev-files": false,
+  "finder": [
+    { "name": "*.php", "exclude": "Tests", "in": ["vendor/symfony/yaml"] }
+  ]
 }
