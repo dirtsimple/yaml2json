@@ -9,7 +9,7 @@
         }
     ],
     "require-dev": {
-        "dirtsimple/clean-yaml": "^0.1",
+        "dirtsimple/clean-yaml": "^0.1.4",
         "symfony/yaml": "^3.4",
         "humbug/box": "3.16.0"
     },
