@@ -11,7 +11,7 @@
     "require-dev": {
         "dirtsimple/clean-yaml": "^0.1",
         "symfony/yaml": "^3.4",
-        "humbug/box": "3.7.0"
+        "humbug/box": "3.16.0"
     },
     "bin": [
         "bin/yaml2json.php",
